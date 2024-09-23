@@ -24,6 +24,18 @@ namespace Hastane
 
         }
 
-        
+        private void btnHasta_Click(object sender, EventArgs e)
+        {
+            FrmHastaGiris frmHastaGiris = new FrmHastaGiris();
+            frmHastaGiris.Show();
+            this.Hide();
+        }
+
+        private void btnDoktor_Click(object sender, EventArgs e)
+        {
+            FrmDoktorGiris frmDoktorGiris = new FrmDoktorGiris();
+            frmDoktorGiris.Show();
+            this.Hide();
+        }
     }
 }

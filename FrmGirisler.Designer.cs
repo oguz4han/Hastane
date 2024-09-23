@@ -29,52 +29,53 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGirisler));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnHasta = new System.Windows.Forms.Button();
+            this.btnDoktor = new System.Windows.Forms.Button();
+            this.btnSekreter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnHasta
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(39, 199);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 171);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-//            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnHasta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHasta.BackgroundImage")));
+            this.btnHasta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHasta.Location = new System.Drawing.Point(39, 199);
+            this.btnHasta.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnHasta.Name = "btnHasta";
+            this.btnHasta.Size = new System.Drawing.Size(200, 171);
+            this.btnHasta.TabIndex = 0;
+            this.btnHasta.UseVisualStyleBackColor = true;
+            this.btnHasta.Click += new System.EventHandler(this.btnHasta_Click);
             // 
-            // button2
+            // btnDoktor
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(273, 199);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 171);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDoktor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDoktor.BackgroundImage")));
+            this.btnDoktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDoktor.Location = new System.Drawing.Point(273, 199);
+            this.btnDoktor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnDoktor.Name = "btnDoktor";
+            this.btnDoktor.Size = new System.Drawing.Size(200, 171);
+            this.btnDoktor.TabIndex = 1;
+            this.btnDoktor.UseVisualStyleBackColor = true;
+            this.btnDoktor.Click += new System.EventHandler(this.btnDoktor_Click);
             // 
-            // button3
+            // btnSekreter
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(513, 199);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 171);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSekreter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSekreter.BackgroundImage")));
+            this.btnSekreter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSekreter.Location = new System.Drawing.Point(513, 199);
+            this.btnSekreter.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnSekreter.Name = "btnSekreter";
+            this.btnSekreter.Size = new System.Drawing.Size(200, 171);
+            this.btnSekreter.TabIndex = 2;
+            this.btnSekreter.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -115,6 +116,16 @@
             this.panel1.Size = new System.Drawing.Size(726, 172);
             this.panel1.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(538, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(163, 136);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -126,17 +137,7 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Bursa Hastane";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(538, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 136);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Form1
+            // FrmGirisler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,14 +147,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSekreter);
+            this.Controls.Add(this.btnDoktor);
+            this.Controls.Add(this.btnHasta);
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FrmGirisler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hastane Panel";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -167,9 +168,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnHasta;
+        private System.Windows.Forms.Button btnDoktor;
+        private System.Windows.Forms.Button btnSekreter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
