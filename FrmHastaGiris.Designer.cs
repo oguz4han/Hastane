@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaGiris));
             this.label1 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.mskTc = new System.Windows.Forms.MaskedTextBox();
@@ -52,7 +53,8 @@
             this.txtSifre.Location = new System.Drawing.Point(104, 140);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(140, 31);
-            this.txtSifre.TabIndex = 1;
+            this.txtSifre.TabIndex = 2;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // mskTc
             // 
@@ -60,7 +62,7 @@
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(140, 31);
-            this.mskTc.TabIndex = 2;
+            this.mskTc.TabIndex = 1;
             this.mskTc.ValidatingType = typeof(int);
             // 
             // lnkUyeOl
@@ -69,9 +71,10 @@
             this.lnkUyeOl.Location = new System.Drawing.Point(250, 148);
             this.lnkUyeOl.Name = "lnkUyeOl";
             this.lnkUyeOl.Size = new System.Drawing.Size(62, 23);
-            this.lnkUyeOl.TabIndex = 3;
+            this.lnkUyeOl.TabIndex = 4;
             this.lnkUyeOl.TabStop = true;
             this.lnkUyeOl.Text = "Üye Ol";
+            this.lnkUyeOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUyeOl_LinkClicked);
             // 
             // label2
             // 
@@ -96,12 +99,14 @@
             this.btnGirisYap.Location = new System.Drawing.Point(133, 181);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(111, 33);
-            this.btnGirisYap.TabIndex = 6;
+            this.btnGirisYap.TabIndex = 3;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // FrmHastaGiris
             // 
+            this.AcceptButton = this.btnGirisYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -115,11 +120,13 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "FrmHastaGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHastaGiris";
+            this.Load += new System.EventHandler(this.FrmHastaGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

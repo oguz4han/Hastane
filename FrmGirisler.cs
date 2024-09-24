@@ -37,5 +37,12 @@ namespace Hastane
             frmDoktorGiris.Show();
             this.Hide();
         }
+
+        private void btnSekreter_Click(object sender, EventArgs e)
+        {
+            FrmSekreterGiris frmSekreterGiris = new FrmSekreterGiris();
+            frmSekreterGiris.Show();
+            this.Hide();
+        }
     }
 }

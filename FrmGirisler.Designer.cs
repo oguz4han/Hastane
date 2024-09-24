@@ -76,6 +76,7 @@
             this.btnSekreter.Size = new System.Drawing.Size(200, 171);
             this.btnSekreter.TabIndex = 2;
             this.btnSekreter.UseVisualStyleBackColor = true;
+            this.btnSekreter.Click += new System.EventHandler(this.btnSekreter_Click);
             // 
             // label1
             // 
@@ -152,6 +153,7 @@
             this.Controls.Add(this.btnHasta);
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.Name = "FrmGirisler";
