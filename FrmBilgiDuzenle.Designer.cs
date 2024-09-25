@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBilgiDuzenle));
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.mskTelefon = new System.Windows.Forms.MaskedTextBox();
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
@@ -49,9 +50,10 @@
             this.btnGuncelle.Location = new System.Drawing.Point(147, 262);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(175, 35);
-            this.btnGuncelle.TabIndex = 28;
+            this.btnGuncelle.TabIndex = 7;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // mskTelefon
             // 
@@ -59,7 +61,7 @@
             this.mskTelefon.Mask = "(999) 000-0000";
             this.mskTelefon.Name = "mskTelefon";
             this.mskTelefon.Size = new System.Drawing.Size(175, 31);
-            this.mskTelefon.TabIndex = 27;
+            this.mskTelefon.TabIndex = 4;
             // 
             // mskTC
             // 
@@ -67,7 +69,7 @@
             this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(175, 31);
-            this.mskTC.TabIndex = 26;
+            this.mskTC.TabIndex = 3;
             this.mskTC.ValidatingType = typeof(int);
             // 
             // cmbCinsiyet
@@ -79,7 +81,7 @@
             this.cmbCinsiyet.Location = new System.Drawing.Point(147, 225);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
             this.cmbCinsiyet.Size = new System.Drawing.Size(174, 31);
-            this.cmbCinsiyet.TabIndex = 25;
+            this.cmbCinsiyet.TabIndex = 6;
             // 
             // label6
             // 
@@ -95,7 +97,7 @@
             this.txtSifre.Location = new System.Drawing.Point(147, 185);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(174, 31);
-            this.txtSifre.TabIndex = 23;
+            this.txtSifre.TabIndex = 5;
             // 
             // label5
             // 
@@ -129,7 +131,7 @@
             this.txtSoyad.Location = new System.Drawing.Point(147, 65);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(174, 31);
-            this.txtSoyad.TabIndex = 19;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label2
             // 
@@ -145,7 +147,7 @@
             this.txtAd.Location = new System.Drawing.Point(147, 26);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(174, 31);
-            this.txtAd.TabIndex = 17;
+            this.txtAd.TabIndex = 1;
             // 
             // label1
             // 
@@ -158,6 +160,7 @@
             // 
             // FrmBilgiDuzenle
             // 
+            this.AcceptButton = this.btnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
@@ -176,9 +179,14 @@
             this.Controls.Add(this.txtAd);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmBilgiDuzenle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBilgiDuzenle";
+            this.Load += new System.EventHandler(this.FrmBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

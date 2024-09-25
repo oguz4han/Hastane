@@ -44,5 +44,32 @@ namespace Hastane
             frmSekreterGiris.Show();
             this.Hide();
         }
+
+        private void hastaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGirisler frmGirisler = new FrmGirisler();    
+            frmGirisler.Show();
+            this.Hide();
+        }
+
+        private void doktorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHastaGiris frmHastaGiris = new FrmHastaGiris();
+            frmHastaGiris.Show();
+            this.Hide();
+        }
+
+        private void sekreterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDoktorGiris frmDoktorGiris = new FrmDoktorGiris();
+            frmDoktorGiris.Show();
+            this.Hide();
+        }
+
+        private void sekreterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmSekreterGiris frmSekreterGiris = new FrmSekreterGiris();
+            frmSekreterGiris.Show();
+        }
     }
 }

@@ -42,35 +42,37 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mskTc
             // 
             this.mskTc.Location = new System.Drawing.Point(103, 147);
-            this.mskTc.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.mskTc.Margin = new System.Windows.Forms.Padding(5);
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(168, 31);
-            this.mskTc.TabIndex = 36;
+            this.mskTc.TabIndex = 4;
             this.mskTc.ValidatingType = typeof(int);
             // 
             // cmbBrans
             // 
             this.cmbBrans.FormattingEnabled = true;
             this.cmbBrans.Location = new System.Drawing.Point(103, 106);
-            this.cmbBrans.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmbBrans.Margin = new System.Windows.Forms.Padding(5);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(168, 31);
-            this.cmbBrans.TabIndex = 34;
+            this.cmbBrans.TabIndex = 3;
             // 
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(103, 24);
-            this.txtAd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(5);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(168, 31);
-            this.txtAd.TabIndex = 31;
+            this.txtAd.TabIndex = 1;
             // 
             // label8
             // 
@@ -108,7 +110,7 @@
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(5);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(168, 31);
-            this.txtSoyad.TabIndex = 38;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label1
             // 
@@ -126,7 +128,7 @@
             this.txtSifre.Margin = new System.Windows.Forms.Padding(5);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(168, 31);
-            this.txtSifre.TabIndex = 40;
+            this.txtSifre.TabIndex = 5;
             // 
             // label3
             // 
@@ -144,9 +146,10 @@
             this.btnEkle.Location = new System.Drawing.Point(103, 231);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(74, 37);
-            this.btnEkle.TabIndex = 41;
+            this.btnEkle.TabIndex = 6;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnSil
             // 
@@ -154,9 +157,10 @@
             this.btnSil.Location = new System.Drawing.Point(197, 231);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(74, 37);
-            this.btnSil.TabIndex = 42;
+            this.btnSil.TabIndex = 7;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -164,25 +168,38 @@
             this.btnGuncelle.Location = new System.Drawing.Point(103, 274);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(168, 37);
-            this.btnGuncelle.TabIndex = 43;
+            this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(297, 23);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(345, 288);
+            this.dataGridView1.Size = new System.Drawing.Size(691, 257);
             this.dataGridView1.TabIndex = 44;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(279, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(697, 287);
+            this.groupBox1.TabIndex = 45;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Bilgiler";
             // 
             // FrmDoktorPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(654, 324);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(985, 324);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -198,12 +215,14 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "FrmDoktorPaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDoktorPaneli";
+            this.Load += new System.EventHandler(this.FrmDoktorPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +244,6 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
