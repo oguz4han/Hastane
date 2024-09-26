@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorBilgiDuzenle));
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
-            this.cmbCinsiyet = new System.Windows.Forms.ComboBox();
+            this.cmbBrans = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,9 +48,10 @@
             this.btnGuncelle.Location = new System.Drawing.Point(145, 228);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(175, 35);
-            this.btnGuncelle.TabIndex = 41;
+            this.btnGuncelle.TabIndex = 6;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // mskTC
             // 
@@ -57,19 +59,19 @@
             this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(175, 31);
-            this.mskTC.TabIndex = 39;
+            this.mskTC.TabIndex = 3;
             this.mskTC.ValidatingType = typeof(int);
             // 
-            // cmbCinsiyet
+            // cmbBrans
             // 
-            this.cmbCinsiyet.FormattingEnabled = true;
-            this.cmbCinsiyet.Items.AddRange(new object[] {
+            this.cmbBrans.FormattingEnabled = true;
+            this.cmbBrans.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.cmbCinsiyet.Location = new System.Drawing.Point(144, 145);
-            this.cmbCinsiyet.Name = "cmbCinsiyet";
-            this.cmbCinsiyet.Size = new System.Drawing.Size(176, 31);
-            this.cmbCinsiyet.TabIndex = 38;
+            this.cmbBrans.Location = new System.Drawing.Point(144, 145);
+            this.cmbBrans.Name = "cmbBrans";
+            this.cmbBrans.Size = new System.Drawing.Size(176, 31);
+            this.cmbBrans.TabIndex = 4;
             // 
             // label6
             // 
@@ -85,7 +87,7 @@
             this.txtSifre.Location = new System.Drawing.Point(145, 188);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(174, 31);
-            this.txtSifre.TabIndex = 36;
+            this.txtSifre.TabIndex = 5;
             // 
             // label5
             // 
@@ -110,7 +112,7 @@
             this.txtSoyad.Location = new System.Drawing.Point(145, 68);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(174, 31);
-            this.txtSoyad.TabIndex = 32;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label2
             // 
@@ -126,7 +128,7 @@
             this.txtAd.Location = new System.Drawing.Point(145, 29);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(174, 31);
-            this.txtAd.TabIndex = 30;
+            this.txtAd.TabIndex = 1;
             // 
             // label1
             // 
@@ -139,13 +141,14 @@
             // 
             // FrmDoktorBilgiDuzenle
             // 
+            this.AcceptButton = this.btnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(357, 280);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.mskTC);
-            this.Controls.Add(this.cmbCinsiyet);
+            this.Controls.Add(this.cmbBrans);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.label5);
@@ -155,9 +158,14 @@
             this.Controls.Add(this.txtAd);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorBilgiDuzenle";
-            this.Text = "FrmDoktorBilgiDuzenle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Doktor Bilgi Duzenle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,7 +175,7 @@
 
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.MaskedTextBox mskTC;
-        private System.Windows.Forms.ComboBox cmbCinsiyet;
+        private System.Windows.Forms.ComboBox cmbBrans;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Label label5;

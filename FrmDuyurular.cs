@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace Hastane
 {
     public partial class FrmDuyurular : Form
@@ -15,6 +17,20 @@ namespace Hastane
         public FrmDuyurular()
         {
             InitializeComponent();
+        }
+
+        SqlBaglantisi bgl = new SqlBaglantisi();
+
+        private void FrmDuyurular_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Duyurular",bgl.baglanti());
+
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+            
+
         }
     }
 }

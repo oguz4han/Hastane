@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBransPanel));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.txtSoyad = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -43,11 +44,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(336, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(384, 202);
             this.dataGridView1.TabIndex = 58;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnGuncelle
             // 
@@ -58,6 +61,7 @@
             this.btnGuncelle.TabIndex = 57;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -68,6 +72,7 @@
             this.btnSil.TabIndex = 56;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnEkle
             // 
@@ -78,14 +83,15 @@
             this.btnEkle.TabIndex = 55;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // txtSoyad
+            // txtAd
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(120, 66);
-            this.txtSoyad.Margin = new System.Windows.Forms.Padding(5);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(168, 31);
-            this.txtSoyad.TabIndex = 52;
+            this.txtAd.Location = new System.Drawing.Point(120, 66);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(5);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(168, 31);
+            this.txtAd.TabIndex = 52;
             // 
             // label1
             // 
@@ -97,13 +103,13 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Ad :";
             // 
-            // txtAd
+            // txtId
             // 
-            this.txtAd.Location = new System.Drawing.Point(120, 25);
-            this.txtAd.Margin = new System.Windows.Forms.Padding(5);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(168, 31);
-            this.txtAd.TabIndex = 48;
+            this.txtId.Location = new System.Drawing.Point(120, 25);
+            this.txtId.Margin = new System.Windows.Forms.Padding(5);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(168, 31);
+            this.txtId.TabIndex = 48;
             // 
             // label2
             // 
@@ -121,8 +127,8 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnSil);
             this.groupBox1.Controls.Add(this.btnEkle);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.txtAd);
-            this.groupBox1.Controls.Add(this.txtSoyad);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 24);
             this.groupBox1.Name = "groupBox1";
@@ -141,11 +147,13 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "FrmBransPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmBransPanel";
+            this.Text = "Branş Paneli";
+            this.Load += new System.EventHandler(this.FrmBransPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -159,9 +167,9 @@
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.TextBox txtSoyad;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
     }

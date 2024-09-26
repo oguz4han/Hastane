@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
+
 namespace Hastane
 {
     public partial class FrmRandevuListesi : Form
@@ -15,6 +18,23 @@ namespace Hastane
         public FrmRandevuListesi()
         {
             InitializeComponent();
+        }
+
+        SqlBaglantisi bgl = new SqlBaglantisi();
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+        }
+
+        private void FrmRandevuListesi_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Randevular", bgl.baglanti());
+
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

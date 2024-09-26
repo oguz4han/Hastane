@@ -118,5 +118,24 @@ namespace Hastane
             FrmDoktorPaneli drp = new FrmDoktorPaneli();
             drp.Show();
         }
+
+        private void btnBransPanel_Click(object sender, EventArgs e)
+        {
+            FrmBransPanel frm = new FrmBransPanel();    
+            frm.Show();
+        }
+
+        private void btnListe_Click(object sender, EventArgs e)
+        {
+            FrmRandevuListesi frmRandevuListesi = new FrmRandevuListesi();
+            frmRandevuListesi.Show();
+
+        }
+
+        private void btnDuyurular_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular frm = new FrmDuyurular();
+            frm.Show();
+        }
     }
 }
